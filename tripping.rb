@@ -63,11 +63,6 @@ def run!
 
 	puts JSON.pretty_generate(rtrn_val)
 
-
-
-	# puts prop.range.inspect
-	# puts prop.cost(start_in: 0,end_in:3)
-
 end
 
 
