@@ -37,6 +37,14 @@ def run!
 		#Invalid if day1 comes after day2
 			raise("start_day after end_day") if stay_len <=0
 
+		#Invalid if start day or end_day are before or after 2015
+			raise ("must start after the start_date: #{prop.start_date}")if day1 < prop.start_date
+		#Invalid if end day after last day
+			last_day = prop.start_date + (prop.avail.length-1)
+			if day1 > last_day or day2> last_day
+				raise ("range continues past known date availabilty: #{last_day}")
+			end
+
 		#check if stay satisfies minstay
 		satisfy,minstay =prop.satisfy_minstay?(start_day: day1,stay_length: stay_len)
 		if !satisfy
