@@ -1,7 +1,7 @@
 #Tripping Interview Problem
 
 ##Running the code
-	code written with ruby 2.1.4
+code written with ruby 2.1.4
 
 To run the code without a range of values:
 	ruby tripping.rb
